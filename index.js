@@ -34,6 +34,13 @@ app.get("/api/v1/", (req, res) => {
 
 app.use("/api/v1/app/", apiRoute);
 
+app.get('/',(req,res)=>{
+    res.send({
+        activeStatus:true,
+        error:false,
+    })
+})
+
 app.listen(PORT, () => {
     console.log(`Server started and running on http://localhost:${PORT}`);
 });
